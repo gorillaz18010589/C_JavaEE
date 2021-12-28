@@ -1,5 +1,6 @@
 package newtest;
-//目的：看doGet,doPost怎麼叫進來的生命流程,取得html參數,還有一次取得所有參數方法
+//12/28 https://www.youtube.com/watch?v=j1buJD0I0MI ->51:18
+//目的：看doGet,doPost怎麼叫進來的生命流程,取得html參數,還有一次取得所有參數方法,header取得
 //目的：改流程不管你前端是get還是post我用doTask一樣都可接受流程一樣
 //3:01:48
 //html:Test1_To_Test_02.html
@@ -43,6 +44,10 @@ package newtest;
   *  網頁預設編碼為：iso-8859-1,如果不指定任何編碼的話,預設為iso-8859-1
   * */
 
+/*
+ * 網頁前端都在webContent
+ * 寫javaServlet通通都在java Resource底下
+ * */
 
  
 //1.留doGet,doPost
