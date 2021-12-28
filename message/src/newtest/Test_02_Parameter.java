@@ -55,6 +55,7 @@ package newtest;
 //8.寫了帳號密碼輸入的表單,發現都是由sevice這隻先取得,然後super爸爸看交給doGet還是doPost
 //9.改流程新增一隻doTask,放在service裡面並且發揚光大,註解super會幫忙導向get,跟post,狀況,讓doGet,doPost,都倒到此
 //
+//
 
 import java.io.IOException;
 import java.io.PrintWriter;
