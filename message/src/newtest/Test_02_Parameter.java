@@ -28,9 +28,23 @@ package newtest;
  *?account=Hank &passowrd=123456 -> ?欄位名稱 ＝ 使用者輸入的參數 &password欄位 ＝ 使用者輸入的密碼參數
  * html->form:加入action,指定哪個servlet來處理
  * <form action="Test_02_Parameter" method="post"><!-- action="交給哪隻servlet" -->
+ 
+ /*
+  * get url參數戴法
+  * http://localhost:8080/message/Test_02_Parameter?    ＝> url
+  * account=%26%2322823%3B%26%2323478%3B%26%2322909%3B& =>  我輸入帳號的大家好中文
+  * passowrd=%26%2312555%3Bwsw                          ＝>密碼參數
+  * 在url傳遞參數時,會進行編碼,像空白符號加號都會進行編碼
+  * 
+  *用Google瀏覽器輸入爪哇 圖片
+  *
+  *  => 變成 爪哇 ＋ 圖片 ：空白變成+號
+  *  所以Google的空白是＋號
+  *  網頁預設編碼為：iso-8859-1,如果不指定任何編碼的話,預設為iso-8859-1
+  * */
 
 
- * */
+ 
 //1.留doGet,doPost
 //2.呼叫service(HttpServletRequest req, HttpServletResponse resp)
 //3.doGet,doPost,service下log看流程
@@ -83,7 +97,7 @@ public class Test_02_Parameter extends HttpServlet {
 		System.out.println("doTask()");
 		
 		//11.測試是否能不管,doGet,doPost都從這邊處理,並且成功輸出在網頁上
-		response.setContentType("text/html; charset=UTF-8");
+		response.setContentType("text/html;charset=GBK"); //GBK顯示在apple瀏覽器才不會亂碼,google是UTF-8
 		PrintWriter printWriter = response.getWriter();
 		
 		//13.java才有的一次取得所有的參數,php還要一個欄位一個欄位對
