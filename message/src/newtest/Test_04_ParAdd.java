@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 //接test03.html,目的取得參數相加
 //https://www.youtube.com/watch?v=j1buJD0I0MI 1:08:54
+//
+//
 /**
  * Servlet implementation class Test_04_ParAdd
  */
