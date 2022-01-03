@@ -62,6 +62,11 @@ package newtest;
 //
 //
 
+//javax.servlet.ServletRequest.getParameter(String arg0):取得參數的值(回傳值String )
+//javax.servlet.ServletRequest.getParameterNames():取得參數名子的物件(回傳)
+//java.util.Enumeration.nextElement(): //裡面還有元素嗎(回傳到String)
+//javax.servlet.http.HttpServletRequest.getRequestURL()://抓取丟出請求息的網址(回傳值 StringBuffer)
+//java.lang.String.getBytes(String charsetName)://把字串的原本是iso-8859-1改成byte UTF-8(回傳byte[]陣列)
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
@@ -104,7 +109,8 @@ public class Test_02_Parameter extends HttpServlet {
 		System.out.println("doTask()");
 		
 		//11.測試是否能不管,doGet,doPost都從這邊處理,並且成功輸出在網頁上
-		response.setContentType("text/html;charset=GBK"); //GBK顯示在apple瀏覽器才不會亂碼,google是UTF-8
+		response.setContentType("text/html; charset=UTF-8"); //GBK顯示在apple瀏覽器才不會亂碼,google是UTF-8
+		response.setCharacterEncoding("UTF-8");
 		PrintWriter printWriter = response.getWriter();
 		
 		//13.java才有的一次取得所有的參數,php還要一個欄位一個欄位對
@@ -112,7 +118,10 @@ public class Test_02_Parameter extends HttpServlet {
 		while (requestNames.hasMoreElements()) {//當這些參數列舉裡面還有值時取處來
 			String reqName = (String) requestNames.nextElement();//取得列舉裡面的參數名稱
 			String requestValue = request.getParameter(reqName);//取得參數的值,沒有的話回傳空直
+			String navalue = 
+					 new String(requestValue.getBytes("ISO-8859-1"),"UTF-8"); //把字串的原本是iso-8859-1改成byte UTF-8
 			printWriter.append(reqName + " = " + requestValue +"<br>");
+			printWriter.append(reqName + " = " + navalue +"<br>");
 		}
 		
 		//12.從html的user接收他們送出的request取得參數,一次一個
