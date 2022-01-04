@@ -1,6 +1,7 @@
 package newtest;
 
 import java.io.IOException;
+//
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -10,8 +11,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 //javax.servlet.ServletRequest.getParameterValues(String name):多選題時可用,取得多個參數時(回傳String[])
 //java.io.PrintWriter.write(String s):輸出串流檔案(void)
+//test04.html
 /**
  * Servlet implementation class Test05_Radio
+ * 示範二選一取得參數
+ * 多選取得參數
+ * <!-- name="gender" 兩個參數一樣群組化  box可以改選-->
+<!--value="m" submit後代表的值 /Test05_Radio?gender=m-->
+<!-- checked 預設圈選 -->
  */
 @WebServlet("/Test05_Radio")
 public class Test05_Radio extends HttpServlet {
