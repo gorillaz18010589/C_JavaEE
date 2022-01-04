@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 //javax.servlet.ServletRequest.getParameterValues(String name):多選題時可用,取得多個參數時(回傳String[])
 //java.io.PrintWriter.write(String s):輸出串流檔案(void)
 //test04.html
+//
 /**
  * Servlet implementation class Test05_Radio
  * 示範二選一取得參數
