@@ -46,7 +46,6 @@ public class Test_04_ParAdd extends HttpServlet {
 		 response.setContentType("text/html; charset=UTF-8"); 
 		 PrintWriter writer = response.getWriter();
 		 writer.append(intX + "+" + intY + "=" + intResult);
-
 	}
 
 
