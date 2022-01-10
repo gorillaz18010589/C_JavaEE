@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 //test04.html
 //目的html等input取得參數方法,二選一,多選,郵遞區號下拉選單,文字選單
 //
+//
 //後端要能收得到給name這些都是後端再給的
 /*
  * //1.抓取男女二選一方式
