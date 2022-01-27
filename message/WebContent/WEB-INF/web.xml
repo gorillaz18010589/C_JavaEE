@@ -6,6 +6,8 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
          
-   
-    
+         <context-param>
+         	<param-name>uploadPath</param-name>
+         	<param-value>/Users/jennifer/git/javaee/message/WebContent/upload</param-value>
+         </context-param>
 </web-app>
